@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 #===============================================================================
-#   DESCRIPTION: Mattermost doesn't support google SSO in CE version so we have 
-#                to use GitLab SSO instead. Slack users were imported to 
-#                mattermost with slack emails, but most of them are not existing
-#                in GitLab. This script updates mattermost users with gitlab id
-#                if that is present to properly use oauth login.
+#   DESCRIPTION: This script updates mattermost users with gitlab id if that is
+#                present to properly use oauth login.
 #        AUTHOR: Aleksandr Kukhar (kyxap), kyxap@kyxap.pro
 #       CREATED: 11/12/18 9:01 +0000 UTC
 #===============================================================================
