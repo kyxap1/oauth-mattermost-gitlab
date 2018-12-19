@@ -33,7 +33,7 @@ resolve_user() {
 update_user() {
   local id="${1:?}"; shift
   local email="${1:?}"
-  local cmd="UPDATE users SET authservice='gitlab',authdata=${id} WHERE email='${email}'"
+  local cmd="UPDATE users SET authservice='gitlab',authdata=${id},password='' WHERE email='${email}'"
   printf -v m_cmd "${CMD_PATTERN}" "${PSQL_BIN}" "${PSQL_MM_ARGS}" "${cmd}"
   printf -v full_cmd 'su - %s -c "%s"' "${PSQL_MM_USER}" "${m_cmd}"
   printf "%s\n" "${full_cmd}"
